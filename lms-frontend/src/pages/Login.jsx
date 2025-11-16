@@ -11,27 +11,13 @@ export default function Login() {
   const [err, setErr] = useState('');
   const nav = useNavigate();
 
-// const submit = async (e) => {
-//   e.preventDefault();
-//   try {
-//     const res = await api.post("/auth/login", { email, password });
-
-//     // res.data MUST contain full user object
-//     await login(res.data.user);
-
-//     nav("/");
-//   } catch (error) {
-//     setErr(error?.response?.data?.message || "Login failed");
-//   }
-// };
 
 const submit = async (e) => {
   e.preventDefault();
   try {
     const res = await api.post("/auth/login", { email, password });
-
-    // res.data.user contains { id, fullName, email, role }
-    login(res.data.user);
+    // res.data.token & res.data.user
+    login(res.data.user, res.data.token);
 
     nav("/");
   } catch (error) {
