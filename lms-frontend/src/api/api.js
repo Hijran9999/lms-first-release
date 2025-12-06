@@ -6,7 +6,7 @@ const api = axios.create({
 });
 
 // const api = axios.create({
-//   baseURL: "https://lms-first-release.onrender.com/api",
+//   baseURL: "https://lm-backend-fx0q.onrender.com/api",
 // });
 api.interceptors.request.use(config => {
   const user = JSON.parse(localStorage.getItem("user"));
