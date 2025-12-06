@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-left">
         <img src="/logo.png" alt="Site Logo" className="logo" />
-        <h2 className="site-name">Learning Management System</h2>
+        <h2 className="site-name">Learning Management System CI/CD Demo</h2>
       </div>
 
       <ul className="nav-links">
